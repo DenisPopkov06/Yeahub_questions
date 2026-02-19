@@ -1,0 +1,15 @@
+.questions_section {
+  background-color: #fff;
+  width: 100%;
+  border-radius: 24px;
+  padding: 24px 20px;
+}
+
+.questions_header {
+  font-size: 24px;
+  font-weight: 500;
+  color: #191919;
+  padding-bottom: 17px;
+  border-bottom: #e8e8e8 1px solid;
+  margin-bottom: 24px;
+}

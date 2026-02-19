@@ -1,0 +1,48 @@
+.header {
+  background-color: #fff;
+}
+
+.container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 8px;
+  width: 84%;
+  margin: auto;
+}
+
+.list {
+  display: flex;
+  gap: 20px;
+  align-items: center;
+}
+
+.list_item {
+  cursor: pointer;
+}
+
+.auth_btns {
+  display: flex;
+  align-items: center;
+  gap: 26px;
+}
+
+.sign_up {
+  color: #6a0bff;
+  cursor: pointer;
+  border: none;
+  font-size: 16px;
+  font-weight: 600;
+  background-color: #fff;
+}
+
+.sign_in {
+  color: #fff;
+  background-color: #6a0bff;
+  font-weight: 500;
+  cursor: pointer;
+  font-size: 18px;
+  border-radius: 12px;
+  border: none;
+  padding: 11.5px 28.5px;
+}

@@ -1,0 +1,35 @@
+.modal_overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.2);
+  backdrop-filter: blur(4px);
+  z-index: 10;
+}
+
+.modal_container {
+  position: fixed;
+  padding: 20px;
+  width: 50%;
+  background-color: #fff;
+  border-radius: 10px;
+  z-index: 11;
+  top: 40%;
+  left: 25%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.modal_reloadBtn {
+  color: #fff;
+  background-color: #6a0bff;
+  font-weight: 500;
+  cursor: pointer;
+  font-size: 14px;
+  border-radius: 12px;
+  border: none;
+  padding: 5px 12px;
+}

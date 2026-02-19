@@ -1,0 +1,31 @@
+.answer_description {
+  display: flex;
+  gap: 40px;
+  align-items: center;
+  margin: 24px 0;
+}
+
+.answer_info {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  border-radius: 8px;
+  background-color: #f8f8f8;
+  padding: 6px 10px;
+  color: #303030;
+  font-weight: 600;
+}
+
+.answer_info span {
+  background-color: #6a0bff;
+  padding: 2px 4px;
+  border-radius: 4px;
+  font-weight: 600;
+  color: #fff;
+}
+
+.short_answer {
+  padding-bottom: 8px;
+  font-weight: 500;
+  line-height: 140%;
+}
