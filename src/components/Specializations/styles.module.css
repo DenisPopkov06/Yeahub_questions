@@ -11,4 +11,5 @@
   text-decoration: underline;
   display: flex;
   justify-content: start;
+  cursor: pointer;
 }
