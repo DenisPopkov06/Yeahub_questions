@@ -10,7 +10,7 @@ const Skills = () => {
   const [limit, setLimit] = useState<number>(5);
   const [isOpen, toggle] = useToggle(false);
   const specializations = useAppSelector(
-    (state) => state.specializationsFilter.ids,
+    (state) => state.reducer.specializationsFilter.ids,
   );
 
   const hasSpecializations = specializations && specializations.length > 0;

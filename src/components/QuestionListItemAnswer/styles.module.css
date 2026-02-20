@@ -24,8 +24,24 @@
   color: #fff;
 }
 
+.img_answer{
+  margin: 24px 0;
+}
+
 .short_answer {
   padding-bottom: 8px;
   font-weight: 500;
   line-height: 140%;
+}
+
+.answer_detailed_container{
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  justify-content: end;
+  cursor: pointer;
+  color: #6A0BFF;
+  font-size: 16px;
+  font-weight: 500;
+  margin: 12px 0 4px;
 }

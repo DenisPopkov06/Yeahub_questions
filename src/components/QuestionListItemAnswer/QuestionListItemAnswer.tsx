@@ -1,4 +1,5 @@
 import type { Question } from "../../api/questionsApi/models/questionsType";
+import answer_detailed_arrow from "../../assets/Images/answer_detailed_arrow.png"
 import styles from "./styles.module.css";
 
 const QuestionListItemAnswer = (question: Question) => {
@@ -12,10 +13,21 @@ const QuestionListItemAnswer = (question: Question) => {
           Сложность:<span>{question.complexity}</span>
         </div>
       </div>
+      {question.imageSrc && (
+        <img
+          src={question.imageSrc}
+          alt="answer"
+          className={styles.img_answer}
+        />
+      )}
       <div
         className={styles.short_answer}
         dangerouslySetInnerHTML={{ __html: question.shortAnswer }}
       ></div>
+      <div className={styles.answer_detailed_container}>
+        Подробнее
+        <img  src={answer_detailed_arrow}/>
+      </div>
     </>
   );
 };

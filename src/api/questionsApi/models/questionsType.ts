@@ -32,4 +32,5 @@ export type Question = {
   longAnswer: string;
   rate: number;
   complexity: number;
+  status?: string
 };
