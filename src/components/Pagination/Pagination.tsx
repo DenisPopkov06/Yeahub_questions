@@ -22,8 +22,8 @@ const Pagination = () => {
       dispatch(setCurrentPage(page));
     }
   }, []);
-
-  if(questions.length) return 
+  
+  if(questions.length === 0) return null
 
   return (
     <div className={styles.pagination_container}>

@@ -29,7 +29,7 @@ const Skills = () => {
   }, [isOpen]);
 
   if (isError) return <Modal />;
-
+  
   return (
     <>
       <div className={styles.skills_container}>

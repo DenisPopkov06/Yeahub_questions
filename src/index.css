@@ -5,39 +5,44 @@
   font-family: "Manrope", sans-serif;
 }
 
-body{
-  background-color: #E8E8E8;
+body {
+  background-color: #e8e8e8;
 }
 
-.container{
-  width: 84%;
-  margin: auto;
-}
-
-main{
-  width: 70%;
-}
-aside{
+aside {
   width: 28%;
+}
+
+main {
+  display: flex;
+  align-items: start;
+  gap: 20px;
+  width: 70%;
+  padding: 40px 0 130px;
 }
 
 ul {
   list-style: none;
 }
 
-.defaultBtn{
-    border-radius: 12px;
-    cursor: pointer;
-    font-size: 16px;
-    padding: 12px;
-    border: #BABABA 1px solid;
-    background-color: #fff;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 5px;
+.container {
+  width: 84%;
+  margin: auto;
 }
 
-.activeBtn{
-    border: #6A0BFF 1px solid;
+.defaultBtn {
+  border-radius: 12px;
+  cursor: pointer;
+  font-size: 16px;
+  padding: 12px;
+  border: #bababa 1px solid;
+  background-color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 5px;
+}
+
+.activeBtn {
+  border: #6a0bff 1px solid;
 }
