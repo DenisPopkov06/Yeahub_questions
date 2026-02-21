@@ -1,13 +1,13 @@
 import { createBrowserRouter } from "react-router-dom";
 import MainLayout from "../Layouts/MainLayout";
-import QuestionsSection from "../components/QuestionsSection/QuestionsSection";
+import QuestionsPage from "../pages/QuestionsPage/QuestionsPage";
 
 export const router = createBrowserRouter([
   {
     path: '/',
     element: <MainLayout />,
     children: [
-      { index: true, element: <QuestionsSection /> },
+      { index: true, element: <QuestionsPage /> },
     ],
   },
 ]);
