@@ -10,7 +10,7 @@ const initialState: SearchValue = {
 };
 
 export const searchFilterSlice = createSlice({
-  name: "complexitiesFilter",
+  name: "searchingFilter",
   initialState,
   reducers: {
     addSearchValue: (state, action: PayloadAction<string>) => {

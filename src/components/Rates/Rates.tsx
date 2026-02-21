@@ -7,8 +7,8 @@ const Rates = () => {
     <>
       <div>Рейтинг</div>
       <ul className={styles.rateList}>
-        {rates.map((rate, index) => (
-          <li key={index}>
+        {rates.map((rate) => (
+          <li key={rate}>
             <RateItem rate={rate} />
           </li>
         ))}

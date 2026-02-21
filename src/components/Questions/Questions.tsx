@@ -2,7 +2,6 @@ import { useEffect } from "react";
 import { useAppDispatch } from "../../hooks/rtk";
 import { useGetQuestionsQuery } from "../../api/questionsApi/questionsApi";
 import { setTotalPages } from "../../redux/slices/paginationSlice";
-import { addQuestions } from "../../redux/slices/questionsSlice";
 import useQuestionsQueryParams from "../../hooks/useQuestionsQueryParams";
 import QuestionsList from "../QuestionsList/QuestionsList";
 import Modal from "../Modal/Modal";
@@ -17,18 +16,12 @@ const Questions = () => {
     isLoading,
     isError,
   } = useGetQuestionsQuery(queryParams);
-
+  console.log(questions)
   useEffect(() => {
-    if (questions?.total) {
+    if (questions?.total !== undefined) {
       dispatch(setTotalPages(Math.ceil(questions.total / questions.limit)));
     }
   }, [questions?.total, questions?.limit]);
-
-  useEffect(() => {
-    if (questions?.data) {
-      dispatch(addQuestions(questions.data));
-    }
-  }, [questions?.data]);
 
   if (isLoading) return <div>Загрузка...</div>;
   if (isError) return <Modal />;

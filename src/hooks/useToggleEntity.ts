@@ -22,6 +22,6 @@ export default function useToggleEntity(
     }
     toggle();
     dispatch(setCurrentPage(1))
-  }, [isActive, removeId, addId]);
+  }, [isActive, removeId, addId, id, toggle]);
   return [isActive, handleClick];
 }

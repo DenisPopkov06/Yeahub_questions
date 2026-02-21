@@ -27,7 +27,7 @@
   gap: 26px;
 }
 
-.sign_up {
+.sign_in {
   color: #6a0bff;
   cursor: pointer;
   border: none;
@@ -36,7 +36,7 @@
   background-color: #fff;
 }
 
-.sign_in {
+.sign_up {
   color: #fff;
   background-color: #6a0bff;
   font-weight: 500;

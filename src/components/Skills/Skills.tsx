@@ -12,11 +12,9 @@ const Skills = () => {
   const [isOpen, toggle] = useToggle(false);
   const dispatch = useAppDispatch();
   const specializations = useAppSelector(
-    (state) => state.reducer.specializationsFilter.ids,
+    (state) => state.specializationsFilter.ids,
   );
-  const selectedSkills = useAppSelector(
-    (state) => state.reducer.skillsFilter.ids,
-  );
+  const selectedSkills = useAppSelector((state) => state.skillsFilter.ids);
 
   const hasSpecializations = specializations && specializations.length > 0;
 
@@ -37,7 +35,7 @@ const Skills = () => {
     if (hasInvalidSelection) {
       dispatch(clearSkillsFilter());
     }
-  }, [skills, specializations]);
+  }, [skills, specializations, selectedSkills, dispatch]);
 
   const toggleSkills = useCallback(() => {
     toggle();

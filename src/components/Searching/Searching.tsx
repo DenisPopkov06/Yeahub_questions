@@ -17,7 +17,7 @@ const Searching = () => {
   useEffect(() => {
     dispatch(addSearchValue(debouncedValue));
     dispatch(setCurrentPage(1));
-  }, [debouncedValue]);
+  }, [debouncedValue, dispatch]);
 
   useEffect(() => {
     const handleClickOutside = (e: MouseEvent) => {
@@ -46,9 +46,9 @@ const Searching = () => {
 
   return (
     <div ref={refDiv} className={`${styles.search} ${isFocus && styles.focus}`}>
-      <button className={styles.searchBtn}>
+      <div className={styles.search_icon}>
         <img src={searchIcon} alt="searchIcon" />
-      </button>
+      </div>
       <input
         className={styles.input}
         ref={refInput}

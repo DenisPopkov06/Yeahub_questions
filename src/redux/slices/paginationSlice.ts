@@ -8,7 +8,7 @@ type Pagination = {
 
 const initialState: Pagination = {
   currentPage: 1,
-  totalPages: 1,
+  totalPages: 0,
 };
 
 export const paginationSlice = createSlice({

@@ -26,7 +26,7 @@ const QuestionListItemAnswer = (question: Question) => {
       ></div>
       <div className={styles.answer_detailed_container}>
         Подробнее
-        <img  src={answer_detailed_arrow}/>
+        <img  src={answer_detailed_arrow} alt="More detailed"/>
       </div>
     </>
   );
