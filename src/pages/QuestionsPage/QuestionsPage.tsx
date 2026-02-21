@@ -1,9 +1,9 @@
-import Aside from "../Aside/Aside";
-import Pagination from "../Pagination/Pagination";
-import Questions from "../Questions/Questions";
+import Aside from "../../components/Aside/Aside"
+import Pagination from "../../components/Pagination/Pagination";
+import Questions from "../../components/Questions/Questions";
 import styles from "./styles.module.css";
 
-const QuestionsSection = () => {
+const QuestionsPage = () => {
   return (
     <>
       <div className={styles.questions_section}>
@@ -16,4 +16,4 @@ const QuestionsSection = () => {
   );
 };
 
-export default QuestionsSection;
+export default QuestionsPage;
