@@ -12,9 +12,9 @@ export type GetQuestionsQueryParams = {
   specializationId?: number;
   rate?: number[];
   complexity?: number[];
+  page?: number;
   titleOrDescription?: string;
   skillFilterMode?: string;
-  page?: number;
 };
 
 export type QuestionsResponse = {
@@ -34,3 +34,7 @@ export type Question = {
   complexity: number;
   status?: string
 };
+
+export type GetQuestionParams = {
+  id?: string
+}

@@ -15,3 +15,8 @@ export type Skill = {
   title: string;
   imageSrc: string | null;
 };
+
+export type GetSkillsQueryParams = {
+  specializations?: number[];
+  limit?: number;
+};

@@ -1,6 +1,7 @@
 import { useMemo } from "react";
 import Logo from "../../assets/Images/Logo.png";
 import styles from "./styles.module.css";
+import { Link } from "react-router-dom";
 
 const Header = () => {
   const navigateList = useMemo(
@@ -14,7 +15,9 @@ const Header = () => {
         <nav className={styles.navigate}>
           <ul className={styles.list}>
             <li className={styles.list_item}>
-              <img src={Logo} alt="logo" />
+              <Link to={"/"}>
+                <img src={Logo} alt="logo" />
+              </Link>
             </li>
             {navigateList.map((item) => (
               <li key={item} className={styles.list_item}>
