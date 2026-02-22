@@ -1,6 +1,6 @@
 import { useCallback, useEffect, useRef, useState } from "react";
 import { useAppDispatch } from "../../hooks/rtk";
-import { addSearchValue } from "../../redux/slices/searchingFilterSlice";
+import { addSearchValue } from "../../redux/slices/filterSlice";
 import { setCurrentPage } from "../../redux/slices/paginationSlice";
 import useDebounce from "../../hooks/useDebounce";
 import searchIcon from "../../assets/Images/Search Icon.png";

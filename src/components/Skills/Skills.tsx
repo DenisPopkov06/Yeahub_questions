@@ -5,16 +5,16 @@ import SkillsList from "../SkillsList/SkillsList";
 import useToggle from "../../hooks/useToggle";
 import Modal from "../Modal/Modal";
 import styles from "./styles.module.css";
-import { clearSkillsFilter } from "../../redux/slices/skillsFilterSlice";
+import { clearSkillsFilter } from "../../redux/slices/filterSlice";
 
 const Skills = () => {
   const [limit, setLimit] = useState<number>(5);
   const [isOpen, toggle] = useToggle(false);
   const dispatch = useAppDispatch();
   const specializations = useAppSelector(
-    (state) => state.specializationsFilter.ids,
+    (state) => state.filter.specializationsIds
   );
-  const selectedSkills = useAppSelector((state) => state.skillsFilter.ids);
+  const selectedSkills = useAppSelector((state) => state.filter.skillsIds);
 
   const hasSpecializations = specializations && specializations.length > 0;
 

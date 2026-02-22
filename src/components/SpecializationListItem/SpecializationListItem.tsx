@@ -1,10 +1,9 @@
 import {
   addSpecializationId,
   removeSpecializationId,
-} from "../../redux/slices/specializationsFilterSlice";
+} from "../../redux/slices/filterSlice";
 import type { Specialization } from "../../api/specializationApi/models/specializationsType";
 import useToggleEntity from "../../hooks/useToggleEntity";
-
 
 const SpecializationListItem = ({ id, title }: Specialization) => {
   const [isActive, toggleSpecialization] = useToggleEntity(

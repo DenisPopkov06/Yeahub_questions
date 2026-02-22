@@ -1,19 +1,9 @@
 import { createSlice } from "@reduxjs/toolkit";
 import type { PayloadAction } from "@reduxjs/toolkit";
-import type { Question } from "../../api/questionsApi/models/questionsType";
 
 interface Complexities {
   complexities: number[];
 }
-
-type Pagination = {
-  currentPage: number;
-  totalPages: number;
-};
-
-type Questions = {
-  questions: Question[];
-};
 
 type Rates = {
   rates: number[];
@@ -32,8 +22,6 @@ type SpecializationsId = {
 };
 
 type Filter = Complexities &
-  Pagination &
-  Questions &
   Rates &
   SearchValue &
   SkillsId &
@@ -41,9 +29,6 @@ type Filter = Complexities &
 
 const initialState: Filter = {
   complexities: [],
-  currentPage: 1,
-  totalPages: 1,
-  questions: [],
   rates: [],
   searchingValue: "",
   skillsIds: [],
@@ -61,18 +46,6 @@ export const filterSlice = createSlice({
       state.complexities = state.complexities.filter(
         (complexity) => action.payload.indexOf(complexity) < 0,
       );
-    },
-    setCurrentPage: (state, action: PayloadAction<number>) => {
-      state.currentPage = action.payload;
-    },
-    setTotalPages: (state, action: PayloadAction<number>) => {
-      state.totalPages = action.payload;
-    },
-    setNextPage: (state) => {
-      state.currentPage += 1;
-    },
-    setPrevPage: (state) => {
-      state.currentPage -= 1;
     },
     addRate: (state, action: PayloadAction<number>) => {
       state.rates.push(action.payload);
@@ -105,6 +78,17 @@ export const filterSlice = createSlice({
   },
 });
 
-export const { addComplexity, removeComplexity } = filterSlice.actions;
+export const {
+  addComplexity,
+  removeComplexity,
+  addRate,
+  removeRate,
+  addSearchValue,
+  addSkillId,
+  removeSkillId,
+  clearSkillsFilter,
+  addSpecializationId,
+  removeSpecializationId,
+} = filterSlice.actions;
 
 export default filterSlice.reducer;

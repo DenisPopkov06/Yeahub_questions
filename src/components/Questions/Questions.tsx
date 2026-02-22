@@ -9,14 +9,14 @@ import styles from "./styles.module.css";
 
 const Questions = () => {
   const dispatch = useAppDispatch();
-  const queryParams = useQuestionsQueryParams()
+  const queryParams = useQuestionsQueryParams();
 
   const {
     data: questions,
     isLoading,
     isError,
   } = useGetQuestionsQuery(queryParams);
-  console.log(questions)
+  
   useEffect(() => {
     if (questions?.total !== undefined) {
       dispatch(setTotalPages(Math.ceil(questions.total / questions.limit)));
