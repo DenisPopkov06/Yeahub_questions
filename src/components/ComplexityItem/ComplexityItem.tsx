@@ -4,7 +4,7 @@ import { setCurrentPage } from "../../redux/slices/paginationSlice";
 import {
   addComplexity,
   removeComplexity,
-} from "../../redux/slices/complexitiesFilterSlice";
+} from "../../redux/slices/filterSlice";
 import useToggle from "../../hooks/useToggle";
 
 type ComplexityItem = {

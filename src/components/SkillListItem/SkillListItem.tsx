@@ -1,7 +1,4 @@
-import {
-  addSkillId,
-  removeSkillId,
-} from "../../redux/slices/skillsFilterSlice";
+import { addSkillId, removeSkillId } from "../../redux/slices/filterSlice";
 import type { Skill } from "../../api/skillsApi/models/skillsType";
 import useToggleEntity from "../../hooks/useToggleEntity";
 import styles from "./styles.module.css";

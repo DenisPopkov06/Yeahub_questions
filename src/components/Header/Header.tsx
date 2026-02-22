@@ -24,8 +24,8 @@ const Header = () => {
           </ul>
         </nav>
         <div className={styles.auth_btns}>
-          <button className={styles.sign_up}>Вход</button>
-          <button className={styles.sign_in}>Регистрация</button>
+          <button className={styles.sign_in}>Вход</button>
+          <button className={styles.sign_up}>Регистрация</button>
         </div>
       </div>
     </header>

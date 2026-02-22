@@ -1,20 +1,16 @@
 import { useAppSelector } from "./rtk";
 
 export default function useQuestionsQueryParams() {
-  const rate = useAppSelector((state) => state.reducer.ratesFilter.rates);
-  const skills = useAppSelector((state) => state.reducer.skillsFilter.ids);
+  const rate = useAppSelector((state) => state.filter.rates);
+  const skills = useAppSelector((state) => state.filter.skillsIds);
   const complexity = useAppSelector(
-    (state) => state.reducer.complexitiesFilter.complexities,
+    (state) => state.filter.complexities,
   );
   const specializations = useAppSelector(
-    (state) => state.reducer.specializationsFilter.ids,
+    (state) => state.filter.specializationsIds,
   );
-  const searchingValue = useAppSelector(
-    (state) => state.reducer.searchingFilter.value,
-  );
-  const currentPage = useAppSelector(
-    (state) => state.reducer.pagination.currentPage,
-  );
+  const searchingValue = useAppSelector((state) => state.filter.searchingValue);
+  const currentPage = useAppSelector((state) => state.pagination.currentPage);
 
   return {
     rate,

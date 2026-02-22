@@ -12,18 +12,17 @@ import styles from "./styles.module.css";
 
 const Pagination = () => {
   const dispatch = useAppDispatch();
-  const totalPages = useAppSelector((state) => state.reducer.pagination.totalPages);
-  const currentPage = useAppSelector((state) => state.reducer.pagination.currentPage);
+  const totalPages = useAppSelector((state) => state.pagination.totalPages);
+  const currentPage = useAppSelector((state) => state.pagination.currentPage);
   const pagination = getPaginationRange(currentPage, totalPages);
-  const questions = useAppSelector(state => state.reducer.questions.questions)
 
   const handleSetPageClick = useCallback((page: number | string) => {
     if (typeof page === "number") {
       dispatch(setCurrentPage(page));
     }
   }, []);
-  
-  if(questions.length === 0) return null
+
+  if (totalPages === 0) return null;
 
   return (
     <div className={styles.pagination_container}>

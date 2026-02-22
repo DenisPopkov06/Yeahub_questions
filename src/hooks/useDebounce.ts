@@ -8,7 +8,7 @@ export default function useDebounce(value: string, time = 300) {
       setDebounceValue(value);
     }, time);
     return () => clearTimeout(timerId);
-  }, [value]);
+  }, [value, time]);
 
   return debounceValue;
 }

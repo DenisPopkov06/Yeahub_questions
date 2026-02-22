@@ -1,5 +1,5 @@
 import useToggleEntity from "../../hooks/useToggleEntity";
-import { addRate, removeRate } from "../../redux/slices/ratesFilterSlice";
+import { addRate, removeRate } from "../../redux/slices/filterSlice"
 
 type RateItemProps = {
   rate: number;
