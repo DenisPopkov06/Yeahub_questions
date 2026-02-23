@@ -1,4 +1,4 @@
-import Aside from "../../components/Aside/Aside";
+import QuestionsAside from "../../components/QuestionsAside/QuestionsAside";
 import MainLayout from "../../components/MainLayout/MainLayout";
 import Pagination from "../../components/Pagination/Pagination";
 import Questions from "../../components/Questions/Questions";
@@ -12,7 +12,7 @@ const QuestionsPage = () => {
         <Questions />
         <Pagination />
       </div>
-      <Aside />
+      <QuestionsAside />
     </MainLayout>
   );
 };

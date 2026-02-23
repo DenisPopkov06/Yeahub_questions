@@ -24,20 +24,18 @@ const Specializations = () => {
   if (isError) return <Modal />;
 
   return (
-    <>
-      <div className={styles.specializations_container}>
-        <div>Специализация</div>
-        {!isLoading && specializations && (
-          <SpecializationsList specializations={specializations} />
-        )}
-        <button
-          onClick={toggleSpecializations}
-          className={styles.specializationBtn}
-        >
-          {isOpen ? "Скрыть все" : "Показать все"}
-        </button>
-      </div>
-    </>
+    <div className={styles.specializations_container}>
+      <div>Специализация</div>
+      {!isLoading && specializations && (
+        <SpecializationsList specializations={specializations} />
+      )}
+      <button
+        onClick={toggleSpecializations}
+        className={styles.specializationBtn}
+      >
+        {isOpen ? "Скрыть все" : "Показать все"}
+      </button>
+    </div>
   );
 };
 

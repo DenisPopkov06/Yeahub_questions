@@ -1,16 +1,12 @@
-import { useParams } from "react-router-dom";
 import MainLayout from "../../components/MainLayout/MainLayout";
-import { useGetQuestionByIdQuery } from "../../api/questionsApi/questionsApi";
+import QuestionAside from "../../components/QuestionAside/QuestionAside";
+import Question from "../../components/Question/Question";
 
 const QuestionPage = () => {
-    const {id} = useParams()
-
-    const {data} = useGetQuestionByIdQuery({id})
-    console.log(data);
-    
   return (
     <MainLayout>
-      <div>{id}</div>
+      <Question />
+      <QuestionAside />
     </MainLayout>
   );
 };

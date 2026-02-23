@@ -24,6 +24,18 @@ export type QuestionsResponse = {
   data: Question[];
 };
 
+type QuestionSkill = {
+  id: number;
+  title: string;
+  description: string;
+  imageSrc: string;
+};
+
+type CreatedBy = {
+  username: string;
+  id: string;
+};
+
 export type Question = {
   id: number;
   title: string;
@@ -32,9 +44,12 @@ export type Question = {
   longAnswer: string;
   rate: number;
   complexity: number;
-  status?: string
+  status?: string;
+  keywords: string[];
+  questionSkills: QuestionSkill[];
+  createdBy: CreatedBy
 };
 
 export type GetQuestionParams = {
-  id?: string
-}
+  id?: string;
+};
