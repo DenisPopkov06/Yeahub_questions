@@ -1,5 +1,6 @@
+import { Link } from "react-router-dom";
 import type { Question } from "../../api/questionsApi/models/questionsType";
-import answer_detailed_arrow from "../../assets/Images/answer_detailed_arrow.png"
+import answer_detailed_arrow from "../../assets/Images/answer_detailed_arrow.png";
 import styles from "./styles.module.css";
 
 const QuestionListItemAnswer = (question: Question) => {
@@ -24,10 +25,9 @@ const QuestionListItemAnswer = (question: Question) => {
         className={styles.short_answer}
         dangerouslySetInnerHTML={{ __html: question.shortAnswer }}
       ></div>
-      <div className={styles.answer_detailed_container}>
-        Подробнее
-        <img  src={answer_detailed_arrow} alt="More detailed"/>
-      </div>
+      <Link className={styles.answer_detailed_container} to={`/${question.id}`}>
+        Подробнее <img src={answer_detailed_arrow} alt="More detailed" />
+      </Link>
     </>
   );
 };

@@ -1,5 +1,6 @@
 import { baseApi } from "../baseApi";
 import type {
+  GetQuestionParams,
   GetQuestionsParams,
   GetQuestionsQueryParams,
   QuestionsResponse,
@@ -35,7 +36,7 @@ export const questionsApi = baseApi.injectEndpoints({
           queryParams.page = params.page;
         }
 
-        queryParams.skillFilterMode = 'ANY';
+        queryParams.skillFilterMode = "ANY";
 
         return {
           url: "questions/public-questions",
@@ -43,7 +44,12 @@ export const questionsApi = baseApi.injectEndpoints({
         };
       },
     }),
+    getQuestionById: builder.query<any, GetQuestionParams>({
+      query: (params) => ({
+        url: `/questions/public-questions/${params.id}`
+      }),
+    }),
   }),
 });
 
-export const { useGetQuestionsQuery } = questionsApi;
+export const { useGetQuestionsQuery, useGetQuestionByIdQuery } = questionsApi;

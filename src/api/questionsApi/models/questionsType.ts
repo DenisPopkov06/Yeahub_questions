@@ -12,9 +12,9 @@ export type GetQuestionsQueryParams = {
   specializationId?: number;
   rate?: number[];
   complexity?: number[];
+  page?: number;
   titleOrDescription?: string;
   skillFilterMode?: string;
-  page?: number;
 };
 
 export type QuestionsResponse = {
@@ -22,6 +22,18 @@ export type QuestionsResponse = {
   page: number;
   limit: number;
   data: Question[];
+};
+
+type QuestionSkill = {
+  id: number;
+  title: string;
+  description: string;
+  imageSrc: string;
+};
+
+type CreatedBy = {
+  username: string;
+  id: string;
 };
 
 export type Question = {
@@ -32,5 +44,12 @@ export type Question = {
   longAnswer: string;
   rate: number;
   complexity: number;
-  status?: string
+  status?: string;
+  keywords: string[];
+  questionSkills: QuestionSkill[];
+  createdBy: CreatedBy
+};
+
+export type GetQuestionParams = {
+  id?: string;
 };

@@ -5,11 +5,14 @@ const QuestionsPage = lazy(
   () => import("../pages/QuestionsPage/QuestionsPage"),
 );
 
+const QuestionPage = lazy(() => import("../pages/QuestionPage/QuestionPage"));
+
 const AppRouter = () => {
   return (
-    <Suspense fallback={<div>Загрузка...</div>}>
+    <Suspense fallback={null}>
       <Routes>
         <Route path="/" element={<QuestionsPage />} />
+        <Route path="/:id" element={<QuestionPage />} />
       </Routes>
     </Suspense>
   );

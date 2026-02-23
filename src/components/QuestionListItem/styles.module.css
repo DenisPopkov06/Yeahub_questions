@@ -38,10 +38,15 @@
   border: none;
   background-color: #fff;
   cursor: pointer;
+  transition: all 300ms ease;
+  transform: rotate(180deg);
 }
 
 .question_button_active {
-  transform: rotate(180deg);
+  border: none;
+  background-color: #fff;
+  cursor: pointer;
+  transition: all 300ms ease;
 }
 
 .loading_fallback {

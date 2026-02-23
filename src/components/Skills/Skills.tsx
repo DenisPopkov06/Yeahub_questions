@@ -16,14 +16,12 @@ const Skills = () => {
   );
   const selectedSkills = useAppSelector((state) => state.filter.skillsIds);
 
-  const hasSpecializations = specializations && specializations.length > 0;
-
   const {
     data: skills,
     isLoading,
     isError,
   } = useGetSkillsQuery(
-    hasSpecializations ? { specializations, limit } : { limit },
+    { specializations, limit },
   );
 
   useEffect(() => {

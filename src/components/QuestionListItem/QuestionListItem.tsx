@@ -17,12 +17,13 @@ const QuestionListItem = (question: Question) => {
         <div className={styles.question_section}>
           <div className={styles.question_title}>{question.title}</div>
         </div>
-        <button className={styles.question_button} onClick={toggle}>
-          <img
-            src={Arrow_question}
-            alt="arrow"
-            className={isActive ? styles.question_button_active : ""}
-          />
+        <button
+          className={
+            isActive ? styles.question_button_active : styles.question_button
+          }
+          onClick={toggle}
+        >
+          <img src={Arrow_question} alt="arrow" />
         </button>
       </div>
       {isActive && (
