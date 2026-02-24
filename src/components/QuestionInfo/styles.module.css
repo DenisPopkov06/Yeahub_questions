@@ -22,6 +22,7 @@
   display: flex;
   align-items: center;
   gap: 10px;
+  flex-wrap: wrap;
 }
 
 .question_description {
@@ -63,8 +64,9 @@
 
 .keyword {
   color: #6a0bff;
-  line-height: 160%;
+  line-height: 130%;
   font-size: 16px;
+  white-space: nowrap;
 }
 
 .author {

@@ -4,7 +4,7 @@ import Question from "../../components/Question/Question";
 
 const QuestionPage = () => {
   return (
-    <MainLayout>
+    <MainLayout path={"/"} linkTitle="Назад">
       <Question />
       <QuestionAside />
     </MainLayout>

@@ -14,10 +14,8 @@ aside {
 }
 
 main {
-  display: flex;
-  align-items: start;
-  gap: 20px;
-  width: 70%;
+  width: 84%;
+  margin: auto;
   padding: 40px 0 130px;
 }
 
@@ -26,8 +24,11 @@ ul {
 }
 
 .container {
-  width: 84%;
-  margin: auto;
+  display: flex;
+  align-items: start;
+  gap: 20px;
+
+  
 }
 
 .defaultBtn {

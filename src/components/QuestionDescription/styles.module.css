@@ -1,0 +1,30 @@
+.questions_section {
+  background-color: #fff;
+  width: 100%;
+  border-radius: 24px;
+  padding: 24px 20px;
+  display: flex;
+  align-items: start;
+  gap: 10px;
+}
+
+.questions_img {
+  border-radius: 12px;
+  height: 160px;
+  width: 160px;
+}
+
+.questions_title {
+  font-weight: 500;
+  font-size: 24px;
+  color: #303030;
+  line-height: 120%;
+  margin-bottom: 12px;
+}
+
+.questions_description {
+  font-weight: 500;
+  font-size: 16px;
+  color: #474747;
+  line-height: 130%;
+}
