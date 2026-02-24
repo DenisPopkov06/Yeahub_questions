@@ -1,0 +1,21 @@
+.questions_section {
+  background-color: #fff;
+  width: 100%;
+  border-radius: 24px;
+  padding: 24px 20px;
+}
+
+.questions_title{
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 120%;
+  color: #303030;
+  margin-bottom: 20px;
+}
+
+.questions_short_answer{
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 130%;
+  color: #303030;
+}

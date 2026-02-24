@@ -48,6 +48,7 @@ export type Question = {
   keywords: string[];
   questionSkills: QuestionSkill[];
   createdBy: CreatedBy
+  description: string
 };
 
 export type GetQuestionParams = {
